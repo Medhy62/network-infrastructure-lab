@@ -1,30 +1,66 @@
-# Network Infrastructure Lab
+# 🌐 Network Infrastructure Lab
 
-## Présentation
+## 📌 Présentation
 
-## Objectifs
+Ce repository présente un laboratoire d'infrastructure réseau inspiré de situations rencontrées dans un environnement professionnel.
 
-## Architecture
+L'objectif est de mettre en pratique la conception, la configuration, la segmentation et le dépannage d'une infrastructure réseau d'entreprise.
 
-## Technologies utilisées
+Le projet couvre notamment :
 
-## Segmentation VLAN
+- la segmentation réseau avec des VLAN ;
+- la configuration de switches ;
+- les ports Access et Trunk ;
+- le routage entre différents réseaux ;
+- le DHCP ;
+- l'administration sécurisée en SSH ;
+- l'intégration d'une infrastructure Wi-Fi ;
+- les mécanismes STP / RSTP ;
+- le diagnostic et le troubleshooting réseau ;
+- la documentation d'une infrastructure.
 
-## Configuration réseau
+> ⚠️ Ce laboratoire est entièrement anonymisé.
+> Les noms d'équipements, adresses IP, VLAN et configurations présentés dans ce repository sont fictifs ou adaptés à un environnement de lab.
 
-### VLAN
-### Ports Access
-### Trunk
-### SSH
-### DHCP
-### Wi-Fi
+---
 
-## Sécurisation
+# 🎯 Objectifs du projet
 
-## Troubleshooting
+Ce projet a pour objectif de démontrer ma capacité à :
 
-## Compétences mises en œuvre
+- concevoir une architecture réseau ;
+- segmenter une infrastructure en plusieurs zones ;
+- configurer des équipements réseau ;
+- sécuriser l'administration des équipements ;
+- diagnostiquer des problèmes de connectivité ;
+- identifier des anomalies réseau ;
+- documenter une infrastructure ;
+- appliquer des bonnes pratiques d'exploitation réseau.
 
-## Améliorations futures
+---
 
-## Disclaimer
+# 🏗️ Architecture
+
+L'environnement de laboratoire représente une infrastructure d'entreprise composée de plusieurs zones réseau.
+
+```text
+                         Internet
+                            │
+                            │
+                       ┌──────────┐
+                       │ Firewall │
+                       └────┬─────┘
+                            │
+                            │
+                     ┌──────┴──────┐
+                     │ Core Switch │
+                     └──────┬──────┘
+                            │
+              ┌─────────────┼─────────────┐
+              │             │             │
+              │             │             │
+        ┌─────┴─────┐ ┌─────┴─────┐ ┌─────┴─────┐
+        │ Access SW │ │ Access SW │ │ Wi-Fi / AP │
+        └───────────┘ └───────────┘ └───────────┘
+              │             │             │
+         Workstations    Servers       Wireless
